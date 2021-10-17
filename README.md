@@ -39,13 +39,13 @@ git init
 Once a file is created/modified, in order to create a new version of the project, one need to add in the stagging. 
 
 ```
-git add fichier.text
+git add index.htlm
 ```
 
 Now that we have file in the stagging, we can create a new version wiht `commit`:
 
 ```
-git commit fichier.text -m " New file created and added"
+git commit index.htm -m " New file created and added"
 ```
 
 the -m is here to add a message about the commit. It should be a clear text saying what has been modified.
