@@ -70,4 +70,85 @@ git remote add NAME
 https://github.com/XXXX/YYYY.git
 ```
 
-NAME represents an alias to be use later the call the repository. NAME can be what we want. Then once can simply pull the project from the remote repository to the local repository.
+NAME represents an alias to be used later to call the repository. NAME can be whatever we want. Then one can simply pull the project from the remote repository to the local repository.
+
+```
+git pull OC main
+```
+
+# Branching
+
+* In order to list all the branches: ``` git branch```
+* In order to create a new branch : ``` git branch NewBranch```
+* To go to the new branch : ``` git checkout NewBranch```
+
+One can continue working in the branch and commit and push normally asdescribed previously.
+
+One can merge also the branch with the main branch to do so first  switch to the main branch ``` git checkout main``` and then merge with ```git merge NewBranch```.
+
+# Correction mistakes
+
+## creating a branch by mistake
+
+If one creates a brnach by mistake:
+
+```
+git branch -d branchName```
+```
+
+## Removing modification from the main branch
+
+It can happen that we make a modification in the main branch while we wanted those modification to be in an other branch. If no commit has been made one can use the command 
+
+``` git stash ```
+
+after that we move to the branch we want the modification and type the command:
+
+``` 
+git stash apply
+```
+
+this command will apply the last stashed modification to the branch. If for some reason on has many  modifications stashed one needs to list them:
+
+``` 
+git stash list
+```
+
+and  select the one that we want to apply to the branch
+
+``` 
+git stash apply stash@{x}
+```
+
+where x is the stash id number.
+
+## Removing a commit from  the main branch
+
+first we need the id of the commit using 
+
+``` git log```
+
+then we remove the last commit
+
+``` 
+git reset --hard HEAD^
+```
+
+then we go to the branch were we wanted to do the commit and type
+
+```git reset --hard ca83a6df```
+
+where ca83a6df are the 8 first character of the commit id 
+
+## Correcting the message of a commit
+
+```
+git commit --amend -m "the message"
+```
+## Adding a file to a commit
+
+```
+git add FichierOublie.txt git commit --amend --no-edit
+```
+
+with the --no-edit no need to edit the message of the commit.
