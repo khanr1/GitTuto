@@ -90,7 +90,7 @@ One can merge also the branch with the main branch to do so first  switch to the
 
 ## creating a branch by mistake
 
-If one creates a brnach by mistake:
+If one creates a branch by mistake:
 
 ```
 git branch -d branchName```
@@ -98,7 +98,7 @@ git branch -d branchName```
 
 ## Removing modification from the main branch
 
-It can happen that we make a modification in the main branch while we wanted those modification to be in an other branch. If no commit has been made one can use the command 
+It can happen that we add a modification in the main branch while we wanted those modification to be in an other branch. If no commit has been made one can use the command 
 
 ``` git stash ```
 
@@ -148,7 +148,8 @@ git commit --amend -m "the message"
 ## Adding a file to a commit
 
 ```
-git add FichierOublie.txt git commit --amend --no-edit
+git add FichierOublie.txt 
+git commit --amend --no-edit
 ```
 
 with the --no-edit no need to edit the message of the commit.
