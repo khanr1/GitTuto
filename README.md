@@ -86,7 +86,7 @@ One can continue working in the branch and commit and push normally asdescribed 
 
 One can merge also the branch with the main branch to do so first  switch to the main branch ``` git checkout main``` and then merge with ```git merge NewBranch```.
 
-# Correction mistakes
+# Correcting mistakes on a local repository
 
 ## creating a branch by mistake
 
@@ -153,3 +153,16 @@ git commit --amend --no-edit
 ```
 
 with the --no-edit no need to edit the message of the commit.
+
+
+# Correcting mistakes on a remote repository
+
+If one has pushed a files with mistakes on the remote repository, one can the push with 
+
+```
+git revert ^HEAD"
+```
+
+# Git reset
+
+
