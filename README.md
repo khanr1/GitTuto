@@ -7,7 +7,7 @@ small notes about the most basic Git commands
 One needs to configure Git before being able to use a repository
 ```
 git config --global user.name "John Snow"
-git config --global user.email johndsnow@example.com
+git config --global user.email johnsnow@example.com
 ```
 Color for git commands output
 
@@ -82,7 +82,7 @@ git pull OC main
 * In order to create a new branch : ``` git branch NewBranch```
 * To go to the new branch : ``` git checkout NewBranch```
 
-One can continue working in the branch and commit and push normally asdescribed previously.
+One can continue working in the branch and commit and push normally as described previously.
 
 One can merge also the branch with the main branch to do so first  switch to the main branch ``` git checkout main``` and then merge with ```git merge NewBranch```.
 
@@ -157,7 +157,7 @@ with the --no-edit no need to edit the message of the commit.
 
 # Correcting mistakes on a remote repository
 
-If one has pushed a files with mistakes on the remote repository, one can the push with 
+If one has pushed a files with mistakes on the remote repository, one can revert the push with
 
 ```
 git revert ^HEAD"
