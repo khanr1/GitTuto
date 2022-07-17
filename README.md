@@ -28,7 +28,7 @@ Git is composed of 3 parts. Together they form the local repository. Those parts
 
 * **Working directory:** It correspond to the project's folder
 * **Stage/Index** sits in between the working directory and the repository. Its represents all modified files that we want to appear in our future version.
-* **Repository** Final local place we new version are stored.
+* **Repository** Final local place where new versions are stored.
 
 
 These 3 parts are in in the local computer. To start,we got in the project folder and initialize git:
