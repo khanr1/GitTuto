@@ -54,26 +54,49 @@ Git is composed of 3 parts. Together they form the local repository. Those parts
 * **Repository** Final local place where new versions are stored.
 
 
-These 3 parts are in in the local computer. To start,we got in the project folder and initialize git:
+These three parts reside on the local computer. To start, navigate to the project folder and initialize Git:
 ```
 git init
 ```
 
-Once a file is created/modified, in order to create a new version of the project, one need to add in the stagging. 
+
+Once a file is created/modified, in order to create a new version of the project, one needs to add it to the staging area:
+
 
 ```
 git add index.htlm
 ```
 
-Now that we have file in the stagging, we can create a new version wiht `commit`:
+Now that we have files in the staging area, we can create a new version with `commit`:
+
 
 ```
 git commit index.htm -m " New file created and added"
 ```
 
-the -m is here to add a message about the commit. It should be a clear text saying what has been modified.
+After the commit, we can send the project to a remote repository with the command `git push`. But first, we need to specify the remote repository:
 
-After the commit, we can send the project on a remote repository with the command ```git push```. First we have specify the remote repository
+### How to Create a Remote Repository on GitHub and Get Its URL
+
+1. **Sign in to GitHub:**
+   Go to [GitHub](https://github.com/) and sign in to your account. If you don't have an account, you'll need to create one.
+
+2. **Create a New Repository:**
+   Once signed in, click on the "+" icon in the upper-right corner of the page and select "New repository" from the dropdown menu.
+
+3. **Fill in Repository Details:**
+   - Enter a name for your repository in the "Repository name" field.
+   - Optionally, add a description to briefly explain what your project is about.
+   - Choose whether the repository should be public (visible to everyone) or private (accessible only to you and selected collaborators).
+   - You can also choose to initialize the repository with a README file, which is a good practice for starting a new project.
+
+4. **Create the Repository:**
+   Click on the "Create repository" button to finalize the creation of your new repository.
+
+5. **Copy the Repository URL:**
+   After the repository is created, GitHub will display a page with instructions on how to set up your local repository to push to the remote. Look for the section titled "Quick setup" or "…or push an existing repository from the command line." There, you'll find the URL of your repository, which you can copy by clicking on the clipboard icon next to it.
+
+Now you have successfully created a remote repository on GitHub and obtained its URL. You can use this URL when specifying the remote repository in your local Git repository using the `git remote add origin <remote_URL>` command.
 
 ```
 git remote add origin https://github.com/khanr1/GitTuto.git
