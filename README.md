@@ -1,10 +1,33 @@
 # GitTuto
-small notes about the most basic Git commands
+
+These a my personal small notes about the most basic Git commands and configuration.
+
+## Connecting to Github with SSH
+
+To establish a secure connection with GitHub using SSH, you need to generate SSH keys using the ssh-keygen command. This process creates a private key (which should never be shared) and a corresponding public key.
+
+By default, Linux and Mac systems have ssh-keygen installed. To generate SSH keys, open a terminal and enter:
+
+```
+ssh-keygen 
+```
+
+The private key will be stored in the file id_rsa, while the public key will be stored in id_rsa.pub.
+
+After generating the keys, you need to register the public key with GitHub. This can be done in the GitHub settings. To conveniently copy the public key to the clipboard, you can use the following command:
+
+```
+pbcopy < ~/.ssh/id_rsa.pub
+```
+
+This command copies the contents of the id_rsa.pub file to the clipboard, allowing you to easily paste it into the appropriate field in GitHub's settings.
 
 
-# Configuration
+
+## Configuration
 
 One needs to configure Git before being able to use a repository
+
 ```
 git config --global user.name "John Snow"
 git config --global user.email johnsnow@example.com
@@ -20,7 +43,7 @@ Listing the global configuration
 git config --list
 ```
 
-# Starting a new  local project
+## Starting a new  local project
 
 
 
@@ -61,7 +84,7 @@ with this command we have linked the local repository with the remote one. One c
 ```
 git push -u origin main
 ```
-# Starting from a remote project
+## Starting from a remote project
 
 As always with start by creating a folder and initialize the project with the ```git init``` command. We then copy the URL of the remote repository we want to work on.  We then link the remote and local repository with the following command:
 
@@ -76,7 +99,7 @@ NAME represents an alias to be used later to call the repository. NAME can be wh
 git pull OC main
 ```
 
-# Branching
+## Branching
 
 * In order to list all the branches: ``` git branch```
 * In order to create a new branch : ``` git branch NewBranch```
@@ -86,9 +109,9 @@ One can continue working in the branch and commit and push normally as described
 
 One can merge also the branch with the main branch to do so first  switch to the main branch ``` git checkout main``` and then merge with ```git merge NewBranch```.
 
-# Correcting mistakes on a local repository
+## Correcting mistakes on a local repository
 
-## creating a branch by mistake
+### creating a branch by mistake
 
 If one creates a branch by mistake:
 
@@ -96,7 +119,7 @@ If one creates a branch by mistake:
 git branch -d branchName```
 ```
 
-## Removing modification from the main branch
+### Removing modification from the main branch
 
 It can happen that we add a modification in the main branch while we wanted those modification to be in an other branch. If no commit has been made one can use the command 
 
@@ -122,7 +145,7 @@ git stash apply stash@{x}
 
 where x is the stash id number.
 
-## Removing a commit from  the main branch
+### Removing a commit from  the main branch
 
 first we need the id of the commit using 
 
@@ -140,12 +163,12 @@ then we go to the branch were we wanted to do the commit and type
 
 where ca83a6df are the 8 first character of the commit id 
 
-## Correcting the message of a commit
+### Correcting the message of a commit
 
 ```
 git commit --amend -m "the message"
 ```
-## Adding a file to a commit
+### Adding a file to a commit
 
 ```
 git add FichierOublie.txt 
