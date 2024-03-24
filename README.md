@@ -128,7 +128,18 @@ git pull OC main
 * In order to create a new branch : ``` git branch NewBranch```
 * To go to the new branch : ``` git checkout NewBranch```
 
-One can continue working in the branch and commit and push normally as described previously.
+One can continue working in the branch and add file to the stagging and commit normally as described previously. In order to push in the remote one will need to use the command:
+
+```
+git push -u origin NewBranch
+```
+
+### After a pull request is accepted
+
+``` git checkout main```
+
+``` git fetch --prune```
+check that all is fine  with git status and git branch -vv and pull origine/main
 
 One can merge also the branch with the main branch to do so first  switch to the main branch ``` git checkout main``` and then merge with ```git merge NewBranch```.
 
