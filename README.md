@@ -1,6 +1,6 @@
 # GitTuto
 
-These a my personal small notes about the most basic Git commands and configuration.
+These are my personal  notes about the most basic Git commands and configuration.
 
 ## Connecting to Github with SSH
 
