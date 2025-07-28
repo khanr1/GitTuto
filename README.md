@@ -134,7 +134,7 @@ One can continue working in the branch and add file to the stagging and commit n
 git push -u origin NewBranch
 ```
 
-### After a pull request is accepted
+### After a pull request is accepted / Mergin
 
 ``` git checkout main```
 
